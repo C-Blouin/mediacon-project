@@ -7,6 +7,8 @@
     <title>Posts</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/app.css">
+    <!-- Custom JS -->
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
 <header>
@@ -44,8 +46,10 @@
             <h2>' .  $post['userName'] . '</h2>
             <p>' . $post['dateCreated'] . '</p>
             <p>' . $post['body'] . '</p>
-            <a href="delete-post.php">Delete</a>
+            <a href="edit-posts.php?postId= ' . $post['postId'] .'">Edit</a>
+            <a onclick="return confirmDelete();" href="delete-post.php?postId= ' . $post['postId'] .'">Delete</a>
             </article>';
+            // Get the id of each post to prepare them for delete.
             // Could wrap all the code in one echo statement.
             // echo '<tr>';
             // echo '<td>' . $post['body'] . '</td>';
