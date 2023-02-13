@@ -5,7 +5,7 @@
 // Indentify which post to remove
 
 // Connect to database
-
+$db = new PDO('mysql:host=172.31.22.43;dbname=Christopher200410435', 'Christopher200410435', 'xnKgLtnZ5Q');
 // Create SQL statement
 
 // populate the SQL delete with selected postId
